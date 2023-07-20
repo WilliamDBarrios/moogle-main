@@ -1,0 +1,197 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+Informe sobre Moogle, situacion hasta el momento
+\end_layout
+
+\begin_layout Standard
+Para ejecutar el proyecto : 
+\end_layout
+
+\begin_layout Enumerate
+Crear en la carpeta del proyecto una carpeta llamada "Content" en la que
+ debe poner los documentos.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Cada documento debe ser de extension ".txt" y su nombre debe ser algo como
+ " palabras_en_minusculas_separadas_por_guiones_bajos.txt" 
+\end_layout
+
+\begin_layout Enumerate
+Abrir un terminal en la carpeta del proyecto 4-Ejecutar el comando “make
+ dev” 
+\end_layout
+
+\begin_layout Enumerate
+De no tener la herramienta make ejecutar el comando “dotnet watch run --project
+ MoogleServer” en Windows o “dotnet run --project MoogleServer” en Linux
+\end_layout
+
+\begin_layout Enumerate
+Mientras presiona “Ctrl” de clic donde dice “http://localhost:5285”, esto
+ abrirá una página web en su navegador donde puede buscar.
+\end_layout
+
+\begin_layout Standard
+Funcionalidades del proyecto: 
+\end_layout
+
+\begin_layout Itemize
+Por ahora solo permite buscar en 16 documentos o menos y es bastante lento.
+ 
+\end_layout
+
+\begin_layout Itemize
+Puede reconocer las palabras de mayor importancia Para buscar escriba en
+ el cuadro de diálogo su consulta y de clic en el botón buscar.
+\end_layout
+
+\begin_layout Itemize
+Se muestran primero los resultados más relevantes para su búsqueda, así
+ le es posible encontrar antes lo que le interesa, ahorrándose tiempo.
+\end_layout
+
+\begin_layout Itemize
+Para los más curiosos, decidimos mantener la lista de resultados completa,
+ así puede analizar su búsqueda en un contexto más amplio y variado.
+\end_layout
+
+\begin_layout Itemize
+Con cada resultado se muestra un pedazo del texto para que conozca más acerca
+ del contenido del mismo y pueda decidir que resultado elegir.
+\end_layout
+
+\begin_layout Itemize
+Ignora archivos vacíos,o que no contengan números ni letras, porque no aportan
+ nada a las consultas del usuario.
+\end_layout
+
+\begin_layout Standard
+Aun falta por implementar:
+\end_layout
+
+\begin_layout Itemize
+Influenciar su búsqueda a través de varios símbolos, que llamamos operadores.
+ Pruebe a buscar “Fama y fortuna”.
+ .Utilice ^ delante de las palabras que quiere que aparezcan en todos los
+ resultados: “Fama y ^fortuna”.
+ .Utilice ! delante de las palabras que quiere que no aparezcan en ningún
+ resultado “Fama y !fortuna”.
+ .Utilice * delante de las palabras que considere mas importantes, se priorizaran
+ los resultados que contengan estas palabras.
+ Mientras mas * mas importancia .
+ “Fama y ***fortuna” .Utilice ~ entre dos palabras que quiere que aparezcan
+ cerca.
+ Se priorizaran los resultados donde aparezcan cerca.
+ “algoritmo ~ bernoulli”
+\end_layout
+
+\begin_layout Itemize
+Combinación de operadores, a través de la precedencia.
+ Por ejemplo, pruebe a consultar “alfa beta”, luego “^alfa ^beta”, y por
+ ultimo “^alfa ~ ^beta”.
+ La regla es simple de recordar : 1-Primero se aplican los operadores !
+ ^ *, y solo el más cercano a la palabra.
+ Por ejemplo la consulta “!!^**^perro ~ !!*****gato”, es interpretada como
+ “^perro ~ *****gato”.
+ Recordar que una secuencia de * se mantiene juntos.
+ 2-Luego se aplica el operador cercanía.
+ Esto posibilita consultas del tipo “^alfa ~ ^beta”: Muestra solo resultados
+ donde estén alfa y beta, y prioriza en los que estén cerca.
+\end_layout
+
+\begin_layout Itemize
+No existe un comportamiento definido para consultas contradictorias: “^ser
+ o no !ser”.
+ Aplicar estos operadores mutuamente exclusivos a un mismo término no tiene
+ un comportamiento definido, sea razonable.
+\end_layout
+
+\begin_layout Itemize
+-Consideramos que usted es una persona y tiene derecho a equivocarse.
+ Por eso ante cualquier eventualidad tipográfica le sugerimos una alternativa.
+ Traducimos la consulta sin sentido “la casq” como “la casa”.
+ El muy común “algortmo” como “algoritmo”.
+ Usted debe copiar la sugerencia en el buscador y volver a buscar.
+ 
+\end_layout
+
+\end_body
+\end_document
