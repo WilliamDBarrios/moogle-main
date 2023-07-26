@@ -160,7 +160,11 @@ Influenciar su búsqueda a través de varios símbolos, que llamamos operadores.
  “Fama y ***fortuna” .Utilice ~ entre dos palabras que quiere que aparezcan
  cerca.
  Se priorizaran los resultados donde aparezcan cerca.
+<<<<<<< HEAD
  “algoritmo ~ bernoulli”.(Los operadores estan pero no funcionan)
+=======
+ “algoritmo ~ bernoulli”(Los operadores estan pero no funcionan)
+>>>>>>> 48a5b6115c62d424929c88cb15de00266717da23
 \end_layout
 
 \begin_layout Itemize
