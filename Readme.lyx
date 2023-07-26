@@ -143,28 +143,15 @@ Ignora archivos vacíos,o que no contengan números ni letras, porque no aportan
  nada a las consultas del usuario.
 \end_layout
 
-\begin_layout Standard
-Aun falta por implementar:
+\begin_layout Itemize
+Los operadores que tenia antes no los habia probado con menos de 16 elementos
+ por eso los tenia como que tenia que implementarlos pero al probarlos con
+ el limite del programa ya funcionan, debo revisar xq no funciona con mas
+ de 16 elementos
 \end_layout
 
-\begin_layout Itemize
-Influenciar su búsqueda a través de varios símbolos, que llamamos operadores.
- Pruebe a buscar “Fama y fortuna”.
- .Utilice ^ delante de las palabras que quiere que aparezcan en todos los
- resultados: “Fama y ^fortuna”.
- .Utilice ! delante de las palabras que quiere que no aparezcan en ningún
- resultado “Fama y !fortuna”.
- .Utilice * delante de las palabras que considere mas importantes, se priorizaran
- los resultados que contengan estas palabras.
- Mientras mas * mas importancia .
- “Fama y ***fortuna” .Utilice ~ entre dos palabras que quiere que aparezcan
- cerca.
- Se priorizaran los resultados donde aparezcan cerca.
-<<<<<<< HEAD
- “algoritmo ~ bernoulli”.(Los operadores estan pero no funcionan)
-=======
- “algoritmo ~ bernoulli”(Los operadores estan pero no funcionan)
->>>>>>> 48a5b6115c62d424929c88cb15de00266717da23
+\begin_layout Standard
+Aun falta por implementar:
 \end_layout
 
 \begin_layout Itemize
