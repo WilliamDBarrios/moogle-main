@@ -143,13 +143,24 @@ Ignora archivos vacíos,o que no contengan números ni letras, porque no aportan
  nada a las consultas del usuario.
 \end_layout
 
-\begin_layout Itemize
-Se pueden usar operadores para influenciar la busqueda: importancia(*),
- cercania(~), no aparece(!), aparece(^)
-\end_layout
-
 \begin_layout Standard
 Aun falta por implementar:
+\end_layout
+
+\begin_layout Itemize
+Influenciar su búsqueda a través de varios símbolos, que llamamos operadores.
+ Pruebe a buscar “Fama y fortuna”.
+ .Utilice ^ delante de las palabras que quiere que aparezcan en todos los
+ resultados: “Fama y ^fortuna”.
+ .Utilice ! delante de las palabras que quiere que no aparezcan en ningún
+ resultado “Fama y !fortuna”.
+ .Utilice * delante de las palabras que considere mas importantes, se priorizaran
+ los resultados que contengan estas palabras.
+ Mientras mas * mas importancia .
+ “Fama y ***fortuna” .Utilice ~ entre dos palabras que quiere que aparezcan
+ cerca.
+ Se priorizaran los resultados donde aparezcan cerca.
+ “algoritmo ~ bernoulli”.(Los operadores estan pero no funcionan)
 \end_layout
 
 \begin_layout Itemize

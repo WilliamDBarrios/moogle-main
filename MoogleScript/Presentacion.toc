@@ -1,0 +1,4 @@
+\beamer@sectionintoc {1}{Qué es Moogle!}{1}{0}{1}
+\beamer@sectionintoc {2}{Características}{3}{0}{2}
+\beamer@subsectionintoc {2}{1}{Características}{3}{0}{2}
+\beamer@subsectionintoc {2}{2}{Ejemplos}{9}{0}{2}
