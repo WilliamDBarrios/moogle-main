@@ -3,7 +3,8 @@
 #Funciones
     echo "  run                         Ejecutar el proyecto"
     echo "  report                      Compilar y generar el pdf del informe a partir del archivo en latex"
-    echo "  show_report [tool]          Mostrar el informe con un visor del gusto del usuario, se ejecuta el comando y tiene 30S para igresar cual visor desea usar sino usa uno por defecto"
+    echo "  show_report [tool]          Mostrar el informe con un visor del gusto del usuario, se ejecuta el comando y tiene 30S"
+    echo "                              para igresar cual visor desea usar sino usa uno por defecto"
     echo "  slides                      Compilar y generar el pdf de la presentación a partir del archivo en latex"
     echo "  show_slides [tool]          Mostrar la presentacion con un visor del gusto del usuario, se ejecuta el comando y tiene 30S para igresar cual visor desea usar sino usa uno por defecto"
     echo "  clean                       Elimina ficheros auxiliares generados en la compilacion de la presentacion, el informe, y en la ejecucion del proyecto "
